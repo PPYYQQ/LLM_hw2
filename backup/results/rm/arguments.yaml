@@ -1,0 +1,47 @@
+data_cfgs:
+  eval_data_files: null
+  eval_datasets: ../../datasets/PKU-SafeRLHF-single-dimension
+  eval_optional_args: []
+  eval_size: null
+  eval_split: test
+  eval_subset: null
+  eval_template: PKUSafeRLHF
+  train_data_files: null
+  train_datasets: null
+  train_optional_args: []
+  train_size: null
+  train_split: null
+  train_subset: null
+  train_template: null
+logger_cfgs:
+  cache_dir: null
+  log_project: align-anything
+  log_run_name: rm
+  log_type: tensorboard
+  output_dir: ../output/rm
+  save_interval: 1000000.0
+model_cfgs:
+  model_max_length: 2048
+  model_name_or_path: /home/pku0008/align-anything/output/rm/slice_end
+  trust_remote_code: true
+special_tokens: null
+train_cfgs:
+  adam_betas:
+  - 0.9
+  - 0.95
+  bf16: true
+  ds_cfgs: ds_z0_config.json
+  epochs: 3.0
+  eval_interval: 10
+  eval_strategy: epoch
+  fp16: false
+  gradient_accumulation_steps: 8
+  gradient_checkpointing: true
+  learning_rate: 2.0e-05
+  lr_scheduler_type: cosine
+  lr_warmup_ratio: 0.03
+  per_device_eval_batch_size: 4
+  per_device_train_batch_size: 4
+  regularization: 0.001
+  seed: 42
+  weight_decay: 0.0

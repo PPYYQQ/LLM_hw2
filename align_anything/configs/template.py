@@ -2364,7 +2364,7 @@ class Qwen2AudioCritique:
 
 
 @register_template('HOMEWORK')
-class PKUSafeRLHF(Template):
+class HOMEWORK(Template):
     system_prompt: str = 'BEGINNING OF CONVERSATION: '
     user_prompt: str = 'USER: {input} '
     assistant_prompt: str = 'ASSISTANT:{output}'
